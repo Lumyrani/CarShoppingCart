@@ -9,13 +9,19 @@
               
              <input type="text" class="form-control" formControlName= "productName" placeholder="Product Name">
             
-         </div>
+       
+         <!-- <div [hidden]="productName.untouched" class="alert alert-danger">
+          Product Name required...
+        </div> -->
+      </div>
         </div><br>
       
             <div>
                <input type="text" class="form-control" formControlName=  "price"  placeholder="Price">
               
-         
+               <!-- <div [hidden]= "price.untouched" class="alert alert-danger">
+               price  required... -->
+            <!-- </div> -->
          </div><br>
          <div class="row">
             <div class="col">
@@ -32,21 +38,13 @@
     </div>
     </div><br>
       <div>
-            <input type="image"class="form-control" src="" alt="" formControlName= "path"  placeholder="Image">
+            <input type="file"class="form-control" src="" alt="" formControlName= "path"  placeholder="Image">
         </div>
 
    <div>
     <input type="submit" (click)= "add()" value="add" class="btn btn-primary">
    </div>
 </form> 
-     <!-- <div class="row">
-        <div class="col">
-  
-         
-         <input type="text" class="form-control" formControlName= "path"  name ="path">
-        </div>
-    </div> -->
-        <!-- <button class = "btn-btn-primary">save</button>  -->
-    <!-- </form> -->
+    
    
     

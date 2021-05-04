@@ -39,7 +39,7 @@ export class  ProductentryComponent implements OnInit {
 productForm= this.fb.group({
 
   pid:["",[Validators.required,Validators.minLength(3)]],
-  name:["",[Validators.required]],
+  productName:["",[Validators.required]],
   price:["",[Validators.required]],
   description:["",[Validators.required]],
   quantity:["",[Validators.required]],
