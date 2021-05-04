@@ -1,0 +1,52 @@
+<!-- <p>productentry works!</p> -->
+<form [formGroup]="productForm">
+    <div class="row">
+        <div class="col">
+             <input type="text"  class="form-control" formControlName= "pid" placeholder="Product Id">
+              </div>
+     
+            <div class="col">
+              
+             <input type="text" class="form-control" formControlName= "productName" placeholder="Product Name">
+            
+         </div>
+        </div><br>
+      
+            <div>
+               <input type="text" class="form-control" formControlName=  "price"  placeholder="Price">
+              
+         
+         </div><br>
+         <div class="row">
+            <div class="col">
+      
+        
+         <input type="text" class="form-control" formControlName= "description"  placeholder="Description">
+        </div>
+    </div><br>
+    <div class="row">
+        <div class="col">
+  
+      
+      <input type="text" class="form-control" formControlName= "quantity"  placeholder="Quantity">
+    </div>
+    </div><br>
+      <div>
+            <input type="image"class="form-control" src="" alt="" formControlName= "path"  placeholder="Image">
+        </div>
+
+   <div>
+    <input type="submit" (click)= "add()" value="add" class="btn btn-primary">
+   </div>
+</form> 
+     <!-- <div class="row">
+        <div class="col">
+  
+         
+         <input type="text" class="form-control" formControlName= "path"  name ="path">
+        </div>
+    </div> -->
+        <!-- <button class = "btn-btn-primary">save</button>  -->
+    <!-- </form> -->
+   
+    

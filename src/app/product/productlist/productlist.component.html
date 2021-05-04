@@ -1,0 +1,59 @@
+                              
+                              <div class="container-fluid">
+                                      <div class ="row">
+                                        <div class="col-12">
+                                                <table class="table table-bordered">
+                                                        <thead>
+                                                                <tr class="text-center">
+                                                                        <th scope="col">Product Id</th>
+                                                                        <th scope="col">Product Name</th>
+                                                                        <th scope="col">Price</th>
+                                                                        <th scope="col">Description</th>
+                                                                        <th scope="col">Quantity</th>
+                                                                        <th scope="col">Image</th>
+
+                                                                </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                                <tr *ngFor="let product of product_list " class="align-middle">
+                                                                        <td class="text-center">{{product.pid}}</td>
+                                                                        <td class="text-center">{{product.productName}}</td>
+                                                                        <td class="text-center">{{product.price}}</td>
+                                                                        <td class="text-center">{{product.description}}</td>
+                                                                        <td class="text-center">{{product.quantity}}</td>
+                                                                        <td class="w-25">
+                                                                                <img class="mx-auto d-block" src ="{{product.path}}" alt="">
+                                                                        </td>
+                                                                </tr>
+                                                        </tbody>
+                                                </table>
+                                        </div>
+                                      </div> 
+                                      
+                              </div> 
+      
+                 <!-- ******************************************************              -->
+                     <!-- <table>
+                             <tr>
+                                <th>Product Id</th>
+                                <th>Product Name</th>
+                                <th>Price</th>
+                                <th>Description</th>
+                                <th>Quantity</th>
+                                <th>Image</th>
+
+                             </tr>
+                             <tr  *ngFor="let product of product_list ">
+                                <td>{{product.pid}}</td>
+                                <td>{{product.productName}}</td>
+                                <td>{{product.price}}</td>
+                                <td>{{product.description}}</td>
+                                <td>{{product.quantity}}</td>
+                                <td> <img  src ="{{product.path}}" alt="">
+                                </td> 
+
+                             </tr>
+                     </table>
+                         -->
+               
+                      
