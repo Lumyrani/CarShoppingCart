@@ -1,59 +1,46 @@
-                              
-                              <div class="container-fluid">
-                                      <div class ="row">
-                                        <div class="col-12">
-                                                <table class="table table-bordered">
-                                                        <thead>
-                                                                <tr class="text-center">
-                                                                        <th scope="col">Product Id</th>
-                                                                        <th scope="col">Product Name</th>
-                                                                        <th scope="col">Price</th>
-                                                                        <th scope="col">Description</th>
-                                                                        <th scope="col">Quantity</th>
-                                                                        <th scope="col">Image</th>
+  <div class="container-fluid">
+           <div class ="row">
+                   <div class="col-12">
+                        <table class="table table-bordered">
+                           <thead>
+                                <tr class="text-center">
+                                        <th scope="col">Product Id</th>
+                                        <th scope="col">Product Name</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Description</th>
+                                        <th scope="col">Image</th>
+                                        <th scope="col">Quantity</th>
+                                        <th scope="col"> <i class="material-icons">shopping_cart </i> {{cartCount}} </th>
+                                </tr>                                     
+                            </thead>
+                          <tbody>
+                                <tr *ngFor="let product of product_list " class="align-middle">
+                                        <td class="text-center">{{product.pid}}</td>
+                                        <td class="text-center">{{product.productName}}</td>
+                                        <td class="text-center"><fa-icon [icon]="dollar"></fa-icon>{{product.price}}</td>
+                                        <td class="text-center">{{product.description}}</td>
+                                        <td class="w-25">
+                                        <img class="mx-auto d-block" src ="{{product.path}}" alt="">
+                                        </td>
+                                        <td class ="text-center">
+                                        <button class="btn btn-outline-info"   (click) ="minusQuantity(product)"> - </button>
+                                        {{product.quantity}}
+                                        <button class="btn btn-outline-info"   (click) ="addQuantity(product)"> + </button></td>
+                                        <td class ="text-center">
+                                        <button class="btn btn-outline-info"   (click) ="addToCart(product) " >add to cart</button>
+                                        </td>           
+                     
+                                </tr>
+                          </tbody>
+                        </table>
 
-                                                                </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                                <tr *ngFor="let product of product_list " class="align-middle">
-                                                                        <td class="text-center">{{product.pid}}</td>
-                                                                        <td class="text-center">{{product.productName}}</td>
-                                                                        <td class="text-center">{{product.price}}</td>
-                                                                        <td class="text-center">{{product.description}}</td>
-                                                                        <td class="text-center">{{product.quantity}}</td>
-                                                                        <td class="w-25">
-                                                                                <img class="mx-auto d-block" src ="{{product.path}}" alt="">
-                                                                        </td>
-                                                                </tr>
-                                                        </tbody>
-                                                </table>
-                                        </div>
-                                      </div> 
-                                      
-                              </div> 
-      
-                 <!-- ******************************************************              -->
-                     <!-- <table>
-                             <tr>
-                                <th>Product Id</th>
-                                <th>Product Name</th>
-                                <th>Price</th>
-                                <th>Description</th>
-                                <th>Quantity</th>
-                                <th>Image</th>
+                </div>
+         </div> 
+ </div>                          
+ 
 
-                             </tr>
-                             <tr  *ngFor="let product of product_list ">
-                                <td>{{product.pid}}</td>
-                                <td>{{product.productName}}</td>
-                                <td>{{product.price}}</td>
-                                <td>{{product.description}}</td>
-                                <td>{{product.quantity}}</td>
-                                <td> <img  src ="{{product.path}}" alt="">
-                                </td> 
 
-                             </tr>
-                     </table>
-                         -->
-               
-                      
+
+ 
+ 
+ 

@@ -1,5 +1,5 @@
 <!-- <p>productentry works!</p> -->
-<form [formGroup]="productForm">
+<form [formGroup]="productForm"style= "padding-top: 4rem;"method="post">
     <div class="row">
         <div class="col">
              <input type="text"  class="form-control" formControlName= "pid" placeholder="Product Id">
@@ -38,8 +38,10 @@
     </div>
     </div><br>
       <div>
-            <input type="file"class="form-control" src="" alt="" formControlName= "path"  placeholder="Image">
+            <input type="file"class="form-control" src="../../../assets/image/"   alt="" formControlName= "path"  placeholder="Image">
+
         </div>
+      
 
    <div>
     <input type="submit" (click)= "add()" value="add" class="btn btn-primary">

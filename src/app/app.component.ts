@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import{faShoppingCart} from '@fortawesome/free-solid-svg-icons'
+import{CartService}from './cart.service'
 
 
 @Component({
@@ -7,5 +9,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ShoppingCart';
+shoppingCart:any=faShoppingCart
+
+
+ title = 'ShoppingCart';
 }

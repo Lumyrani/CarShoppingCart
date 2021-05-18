@@ -1,0 +1,40 @@
+<p>checkout works!</p>
+<div class="container-fluid">
+    <div class ="row">
+      <div class="col-12">
+              <table class="table table-bordered">
+    <thead>
+           
+            <tr class="text-center">
+                    <th scope="col">Product Id</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Sub Total </th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Quantity</th>
+                    </tr>
+                    </thead>
+<tbody>
+    <tr *ngFor="let product of items" class="align-middle">
+            
+              <td class="text-center">{{product.pid}} <br></td>
+              <td class="text-center">{{product.productName}} <br></td>
+              <td class="text-center"><fa-icon [icon]="dollar"></fa-icon>{{product.price}} <br></td>
+              <td class="text-center">{{Total}}<br></td>
+              <td class="w-25">
+                      <img class="mx-auto d-block" src ="{{product.path}}" alt="">
+              </td> 
+              <td class="text-center">{{product.quantity}}</td>
+                         
+</tbody>                    
+            </table> 
+        </div>
+    </div> 
+</div>
+<router-outlet></router-outlet>
+<td class ="text-center"> 
+<button class="btn btn-outline-info"   (click) ="calcTotalCost()">
+Total Bill Amount</button>  
+</td> 
+
+
