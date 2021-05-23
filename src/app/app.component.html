@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
            <li class="nav-item">
-              <a class="nav-link "class="btn btn-warning"routerLink ="home"> Products </a>
+              <a class="nav-link "class="btn btn-warning"routerLink ="home"> Products Home Page  </a>
            </li>
           <br>
           <li class="nav-item">
@@ -18,7 +18,8 @@
        
           <div class="nav-item">  
               <a class="nav-link"class=  "btn btn-info"routerLink ="checkout">
-              <i class="material-icons">shopping_cart</i>Checkout</a>
+              <i class="material-icons">shopping_cart</i> <b><span style="color:indigo ">CART</span></b> 
+                ({{cartflagCount}} items)</a>
               </div>
              
      </div>
@@ -26,6 +27,5 @@
   </nav>
  
 <router-outlet></router-outlet> 
-
 
 

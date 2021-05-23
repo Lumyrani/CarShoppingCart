@@ -1,4 +1,4 @@
-<p>checkout works!</p>
+
 <div class="container-fluid">
     <div class ="row">
       <div class="col-12">
@@ -20,21 +20,42 @@
               <td class="text-center">{{product.pid}} <br></td>
               <td class="text-center">{{product.productName}} <br></td>
               <td class="text-center"><fa-icon [icon]="dollar"></fa-icon>{{product.price}} <br></td>
-              <td class="text-center">{{Total}}<br></td>
+              <td class="text-center">{{product.quantity*product.price}}<br></td>
               <td class="w-25">
                       <img class="mx-auto d-block" src ="{{product.path}}" alt="">
               </td> 
+            
               <td class="text-center">{{product.quantity}}</td>
-                         
+             
+            
 </tbody>                    
             </table> 
         </div>
     </div> 
 </div>
 <router-outlet></router-outlet>
-<td class ="text-center"> 
-<button class="btn btn-outline-info"   (click) ="calcTotalCost()">
-Total Bill Amount</button>  
-</td> 
+<br><br>
+
+<div  *ngIf ="totalamount==0">
+    <b>Click here to see yout total amount & check out your cart 
+    <button type="button" class="btn btn-info" (click) ="calcTotalCost()" >Check Out
+        
+    </button> </b><br></div>
+    <div *ngIf ="totalamount!=0">
+      
+   <b>your total bill amount =   <fa-icon [icon]="dollar " > </fa-icon>{{totalamount}} </b> </div>
+
+
+
+<br>
+<div >
+<b>If you want to empty your cart  
+
+
+     <button type="button" class="btn btn-danger" (click)="clearCart()" >  Empty Cart <br ></button> </b>
+     <div *ngIf="items==[]">
+     <b> your added cart items removed </b> </div>
+
+</div>
 
 

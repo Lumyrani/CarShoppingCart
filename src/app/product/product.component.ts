@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import{Product}from'./product'
+// import{Product}from'../product'
 // import{faShoppingCart} from '@fortawesome/free-solid-svg-icons'
 
 @Component({

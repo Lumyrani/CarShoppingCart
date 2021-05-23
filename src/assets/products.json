@@ -1,11 +1,11 @@
 [
-    {"pid":101,"productName":"Tesla", "price":"75,000","description":"Automatic Electric Car","quantity":0,"path":"../../assets/image/Tesla.png"},
+    {"pid":101,"productName":"Tesla", "price":75000,"description":"Automatic Electric Car","quantity":0,"path":"../../assets/image/Tesla.png"},
 
-    {"pid":102,"productName":"Lamborghini","price":"1,00,000","description":"Luxurious Sports car","quantity":0,"path":"../../assets/image/Lamborghini.png"},
+    {"pid":102,"productName":"Lamborghini","price":100000,"description":"Luxurious Sports car","quantity":0,"path":"../../assets/image/Lamborghini.png"},
 
-    {"pid":103,"productName":"BMW", "price":"45,000","description":"Premium Car","quantity":0,"path":"../../assets/image/BMW.png"},
+    {"pid":103,"productName":"BMW", "price":45000,"description":"Premium Car","quantity":0,"path":"../../assets/image/BMW.png"},
 
-    {"pid":104,"productName":"Audi", "price":"50,000","description":"Luxurious car","quantity":0,"path":"../../assets/image/Audi.png"},
+    {"pid":104,"productName":"Audi", "price":50000,"description":"Luxurious car","quantity":0,"path":"../../assets/image/Audi.png"},
 
-    {"pid":105,"productName":"Benz",  "price":"40,000","description":"Affordable Car","quantity":0,"path":"../../assets/image/Benz.png"}
+    {"pid":105,"productName":"Benz",  "price":40000,"description":"Affordable Car","quantity":0,"path":"../../assets/image/Benz.png"}
 ]

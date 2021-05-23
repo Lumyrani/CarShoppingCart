@@ -5,33 +5,43 @@ import { Injectable } from '@angular/core';
 })
 
 export class CartService {
-  totalPrice:number =0
+  total:number =0
   items:any = [];
+  count:number=0
+  // Total:number=0
   constructor(){}
- total:any=[]
+
 
   
 addToCart(product:any) {
  this.items.push(product);
+//  this.productCount(this.items)
+
 }
 
 getItems() {
   return this.items;
+  
 }
-
 clearCart() {
- this.items = [];
- return this.items;
-}
+  this.items = [];
+  this.total= 0
+  return this.items;
+ }
 
+// clearCart() {
+//  this.items = [];
+//  return this.items;
+// }
+// productCount(product:any)
+// {
+//   if(product.productName==this.items.productName)
+//  this.count=this.items.product.quantity
+//  return this.count
+//   }
 
-totalprice=  this.items.price * this.items.quantity;
-calcTotalCost(){
-  let total = 0;
- this.items.forEach((product:any)=> {
-  this.total = this.items.price * this.items.quantity;
-  });
-}
+// // Total=  parseInt(this.items.price )* parseInt(this.items.quantity);
+ // this.count=this.cart.addToCart(this.product_list.quantity++)
 }
 
 
