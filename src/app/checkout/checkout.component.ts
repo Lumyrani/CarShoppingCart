@@ -11,51 +11,41 @@ import { from } from 'rxjs';
   styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent implements OnInit {
-dollar:any=faDollarSign
+ dollar:any=faDollarSign
  
+total:number=0
+ totalamount:number=0 
 
-cartCount:number=0
-totalQuantity:number=0
-totalamount:number=0 
-  items= this.cart.getItems();
 
-constructor(private pservice:ProductService, private cart: CartService) { 
+ items= this.cart.getItems();
 
  
+ constructor( private cart: CartService) { 
 
-}
+ }
 
   ngOnInit(): void {
   
-
-
   }
 
-  flag(){
-  let flag =0
+ 
+  clear() {
+  this.items=this.cart.clearCart() ;
+  this.total= 0
+  return this.items;
   
-  for (var i=0;i<this.items.length;i++){
-     
-   flag=this.items[i].quantityCount
-   this.cartCount=flag
-     
   }
-  return this.cartCount
-  }
+   
 
   calcTotalCost(){
   
-    let total = 0;
-    for (var i=0;i<this.items.length;i++){
-      total+=this.items[i].price * this.items[i].quantity
-      this.totalamount=total
-    }
-    return total
+  let total = 0;
+  for (var i=0;i<this.items.length;i++){
+  total+=this.items[i].price * this.items[i].quantity
+  this.totalamount=total
+  }
+  return total
   }
 
-  clearCart() {
-    this.items = [];
-    this.totalamount= 0
-    return this.items;
-   }
+  
 }

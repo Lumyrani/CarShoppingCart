@@ -6,7 +6,7 @@ import{CartService} from'src/app/cart.service';
 import{ from, of, Subscription} from 'rxjs'
 import{ProductModule}from '../product.module'
 import { ActivatedRoute } from '@angular/router';
-// import{Product}from 'src/app/product'
+
 
 @Component({
   selector: 'app-productlist',
@@ -50,6 +50,7 @@ export class ProductlistComponent implements OnInit {
 
   flag(quantityCount:any)
   {
+    
    this.cartCount=quantityCount+this.cartCount
   return this.cartCount
   }

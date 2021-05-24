@@ -8,15 +8,20 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import{FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CheckoutComponent } from './checkout/checkout.component';
+import {AngularFireModule} from '@angular/fire'
+import{AngularFireDatabaseModule} from '@angular/fire/database'
+import{environment}from '../environments/environment'
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 
-import { ProductlistComponent } from './product/productlist/productlist.component';
-// import { Product } from './product';
-import { ProductComponent } from './product/product.component';
 @NgModule({
   declarations: [
     AppComponent,
     CheckoutComponent,
-    
+    LoginComponent,
+    LogoutComponent,
+   
+   
   ],
 
   imports: [
@@ -28,6 +33,9 @@ import { ProductComponent } from './product/product.component';
     HttpClientModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
+    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig)
+    
  
   ],
 

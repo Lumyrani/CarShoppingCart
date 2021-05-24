@@ -1,4 +1,5 @@
 
+  <div *ngIf= "items!=''">
 <div class="container-fluid">
     <div class ="row">
       <div class="col-12">
@@ -33,10 +34,11 @@
         </div>
     </div> 
 </div>
+
 <router-outlet></router-outlet>
 <br><br>
 
-<div  *ngIf ="totalamount==0">
+<div  *ngIf ="totalamount==0 ">
     <b>Click here to see yout total amount & check out your cart 
     <button type="button" class="btn btn-info" (click) ="calcTotalCost()" >Check Out
         
@@ -45,17 +47,19 @@
       
    <b>your total bill amount =   <fa-icon [icon]="dollar " > </fa-icon>{{totalamount}} </b> </div>
 
-
+</div>
 
 <br>
-<div >
+<div *ngIf ="items!=''" >
 <b>If you want to empty your cart  
 
 
-     <button type="button" class="btn btn-danger" (click)="clearCart()" >  Empty Cart <br ></button> </b>
-     <div *ngIf="items==[]">
+     <button type="button" class="btn btn-danger" (click)="clear()" >  Empty Cart <br ></button> </b>
+
+
+  <div *ngIf= "items==''">
+
      <b> your added cart items removed </b> </div>
 
-</div>
-
-
+    </div>
+    
